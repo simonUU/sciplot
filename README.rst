@@ -48,4 +48,4 @@ sciplot.hist([1,2])
 
 ```
 
-![Example](examples/stacked_plot.png)
+![Example](examples/stacked_plot.png?raw=true "Title")
