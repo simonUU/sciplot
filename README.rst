@@ -3,17 +3,49 @@ sciplot
 =======
 
 
-Add a short description here!
+Style and plotting tools for matplotlib.
 
 
-Description
-===========
 
-A longer description of your project goes here...
+Installation
+============
+
+```bash
+
+python3 ./setup.py develop --user
+
+```
+
+The matolotlib style can be installed in the sytlelib folder:
+
+```bash
+
+./install_mlp_style.sh
+
+```
+
+Usage
+=====
+
+After installation you can use the style with matplotlib:
+
+```python
+
+import matplotlib.pyplot as plt
+
+plt.style.use('sciplot')
+
+```
 
 
-Note
-====
+To use the library you can do
 
-This project has been set up using PyScaffold 3.1. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+```python
+
+import sciplot
+
+sciplot.hist([1,2])
+
+```
+
+![Example](examples/stacked_plot.png)
