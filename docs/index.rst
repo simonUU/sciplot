@@ -9,6 +9,78 @@ This is the documentation of **sciplot**.
     This project is in development.
 
 
+Sciplot offers additional features to matplotlib for making scientific plots, such as histograms and graphs.
+One of the major features is the builtin :code:`hist` function for plotting multiple histograms and graphs on the same
+x-axis with the same binning.
+This package is intended to be used alongside with matplotlib.
+
+Example
+-------
+
+Simple fit and plot of a Gaussian Distribution:
+
+.. code-block:: python
+   import matplotlib.pyplot as plt
+   import sciplot as sp
+
+   plt.style.use('sciplot')
+
+   import numpy as np
+
+   simulation_data = np.append(np.random.random_sample(100)*7 - 3.5, np.random.normal(0, 0.5, 100))
+   data = np.append(np.random.random_sample(100)*7 - 3.5, np.random.normal(0, 0.4, 100))
+
+   sp.errorhist(simulation_data, bins=30, color='black', label='Pseudo Simulation')
+   sp.hist(data, fill=True, style=1, label='Pseudo Data')
+
+   plt.legend()
+   sp.labels('E', "Events", "GeV", 1)
+   sp.save("example.png")
+
+The produced output will look like this:
+
+.. figure:: http://www.desy.de/~swehle/sciplot.png
+   :scale: 30 %
+   :alt: Output of the example plot.
+
+Another feature is the automaitc creation of stacked histograms:
+
+.. code-block:: python
+   import matplotlib.pyplot as plt
+   import sciplot as sp
+   import pandas as pd
+   import numpy as np
+
+
+   plt.style.use('sciplot_ticks')
+
+   # Create some pseudo data
+   nb = 5000
+   ns = 3000
+   df = dict({'mass': np.append(np.random.random_sample(nb)*7 - 3.5, np.random.normal(0, 0.5, ns))})
+   df['exp'] = np.random.randint(0, 6, ns+nb)
+   df = pd.DataFrame(df)
+
+   # Automatic creation of a stacked plot of 'mass' split by values of 'exp'
+   sp.stacked(df, "mass", 'exp', bins=50,)
+
+   sp.xlim()
+   sp.labels('$\Delta M$', "Events", "GeV", 0)
+   sp.save("stacked_plot.png")
+
+The produced output will look like this:
+
+.. figure:: http://www.desy.de/~swehle/sciplot2.png
+   :scale: 30 %
+   :alt: Output of the example stacked plot.
+
+
+Installation
+============
+
+This package will be made available for pip.
+
+
 Contents
 ========
 
