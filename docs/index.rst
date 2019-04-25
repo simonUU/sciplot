@@ -1,8 +1,8 @@
-=======
-sciplot
-=======
+==========
+py-sciplot
+==========
 
-This is the documentation of **sciplot**.
+This is the documentation of **py-sciplot**, scientific plotting tools for python matplotlib.
 
 .. note::
 
@@ -20,6 +20,7 @@ Example
 Simple fit and plot of a Gaussian Distribution:
 
 .. code-block:: python
+
    import matplotlib.pyplot as plt
    import sciplot as sp
 
@@ -40,12 +41,13 @@ Simple fit and plot of a Gaussian Distribution:
 The produced output will look like this:
 
 .. figure:: http://www.desy.de/~swehle/sciplot.png
-   :scale: 30 %
+   :width: 300 px
    :alt: Output of the example plot.
 
 Another feature is the automaitc creation of stacked histograms:
 
 .. code-block:: python
+
    import matplotlib.pyplot as plt
    import sciplot as sp
    import pandas as pd
@@ -71,7 +73,7 @@ Another feature is the automaitc creation of stacked histograms:
 The produced output will look like this:
 
 .. figure:: http://www.desy.de/~swehle/sciplot2.png
-   :scale: 30 %
+   :width: 300 px
    :alt: Output of the example stacked plot.
 
 
