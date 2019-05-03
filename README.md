@@ -48,4 +48,6 @@ sciplot.hist([1,2])
 
 ```
 
+Another feature is to create stacked histograms easily.
+
 ![Example](examples/stacked_plot.png?raw=true "Title")
