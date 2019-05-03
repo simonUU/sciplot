@@ -10,6 +10,9 @@ Style and plotting tools for matplotlib.
 Installation
 ============
 
+`sciplot` is now available on pip. 
+It can also be installed using this repository.
+
 ```bash
 
 python3 ./setup.py develop --user
