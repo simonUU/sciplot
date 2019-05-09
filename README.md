@@ -10,6 +10,9 @@ Style and plotting tools for matplotlib.
 Installation
 ============
 
+`sciplot` is now available on pip. 
+It can also be installed using this repository.
+
 ```bash
 
 python3 ./setup.py develop --user
@@ -47,5 +50,7 @@ import sciplot
 sciplot.hist([1,2])
 
 ```
+
+Another feature is to create stacked histograms easily.
 
 ![Example](examples/stacked_plot.png?raw=true "Title")
